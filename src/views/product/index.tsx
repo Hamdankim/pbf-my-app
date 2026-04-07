@@ -1,4 +1,4 @@
-import styles from "../../pages/produk/product.module.scss";
+import styles from "../../pages/product/product.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 

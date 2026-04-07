@@ -8,7 +8,7 @@ const TampilanRegister = () => {
   const { push } = useRouter();
   const [error, setError] = useState("");
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setError("");
     const form = event.currentTarget;
@@ -106,7 +106,11 @@ const TampilanRegister = () => {
               className={style.register__form__item__input}
             />
           </div>
-          <button type="submit" className={style.register__form__item__button} disabled={isLoading}>
+          <button
+            type="submit"
+            className={style.register__form__item__button}
+            disabled={isLoading}
+          >
             {isLoading ? "Loading..." : "Register"}
           </button>
         </form>
