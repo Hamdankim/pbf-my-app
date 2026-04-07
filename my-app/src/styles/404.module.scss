@@ -1,0 +1,54 @@
+.error {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 20px;
+
+  &__card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    width: 100%;
+  }
+
+  &__image {
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    color: #1e3c72;
+    margin-bottom: 15px;
+  }
+
+  /* 🔹 Style untuk semua tag p */
+  p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  /* 🔹 Style khusus untuk link dalam p */
+  a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #1e3c72;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.3s ease;
+  }
+
+  a:hover {
+    background-color: #2a5298;
+    transform: translateY(-2px);
+  }
+}
