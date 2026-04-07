@@ -30,6 +30,7 @@ const TampilanProduk = ({ products }: { products: ProductType[] }) => {
                   alt={product.name}
                   width={200}
                   height={200}
+                  unoptimized
                   className={styles.produk__content__item__image}
                 />
 
