@@ -8,7 +8,8 @@ const TampilanLogin = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { push, query } = useRouter();
 
-  const callbackUrl = typeof query.callbackUrl === "string" ? query.callbackUrl : "/";
+  const callbackUrl =
+    typeof query.callbackUrl === "string" ? query.callbackUrl : "/";
   const [error, setError] = useState("");
 
   const handleSubmit = async (event: any) => {
@@ -35,7 +36,6 @@ const TampilanLogin = () => {
       setIsLoading(false);
       setError("wrong email or password");
     }
-
   };
 
   const handleOAuthSignIn = async (provider: "google" | "github") => {
@@ -67,10 +67,7 @@ const TampilanLogin = () => {
         <div className={style.login__form}>
           <form onSubmit={handleSubmit}>
             <div className={style.login__form__item}>
-              <label
-                htmlFor="email"
-                className={style.login__form__item__label}
-              >
+              <label htmlFor="email" className={style.login__form__item__label}>
                 Email
               </label>
               <input
@@ -81,7 +78,6 @@ const TampilanLogin = () => {
                 className={style.login__form__item__input}
               />
             </div>
-
             <div className={style.login__form__item}>
               <label
                 htmlFor="Password"
@@ -104,12 +100,12 @@ const TampilanLogin = () => {
             >
               {isLoading ? "Loading..." : "Login"}
             </button>
-            <br /> <br />
+            <br />
+            <br />
             <button
               type="button"
               onClick={() => handleOAuthSignIn("google")}
               className={style.login__form__item__button}
-              disabled={isLoading}
             >
               {isLoading ? "Loading..." : "Sign in with Google"}
             </button>
@@ -118,14 +114,14 @@ const TampilanLogin = () => {
               type="button"
               onClick={() => handleOAuthSignIn("github")}
               className={style.login__form__item__button}
-              disabled={isLoading}
             >
               {isLoading ? "Loading..." : "Sign in with GitHub"}
             </button>
           </form>
           <br />
           <p className={style.login__form__item__text}>
-            Tidak punya akun? <Link href="/auth/register">Ke Halaman Register</Link>
+            Tidak punya akun?{" "}
+            <Link href="/auth/register">Ke Halaman Register</Link>
           </p>
         </div>
       </div>
